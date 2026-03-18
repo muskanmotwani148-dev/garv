@@ -9,7 +9,7 @@ bot.onText(/\/start/, (msg) => {
   const chatId = msg.chat.id;
 
   const text = `Welcome to GARV TRADING💸 
-! 📊🇮🇳\n\nDaily market insights, charts, and educational trading setups.\nTap the buttons below 👇`;
+  \n\nDaily market insights, charts, and educational trading setups.\nTap the buttons below 👇`;
 
   const options = {
     reply_markup: {
