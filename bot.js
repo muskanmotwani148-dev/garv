@@ -8,16 +8,17 @@ const bot = new TelegramBot(TOKEN, { polling: true });
 bot.onText(/\/start/, (msg) => {
   const chatId = msg.chat.id;
 
-  const text = `Welcome to GARV TRADING💸 
+  const text = `Welcome to GARV TRADING 💸
 
-Get daily market insights, powerful charts & easy-to-understand setups.
-Upgrade your trading skills step by step with us.
+This platform is created for educational purposes only.
 
-🚀 Learn • Analyze • Grow
-📈 Join the smart traders community
+Get daily market insights, learning-based chart analysis & easy-to-understand trading concepts.
+Improve your knowledge step by step with us.
 
-Tap the buttons below 👇`;
+🚀 Learn • Understand • Grow
+📚 Educational Content Only – No Financial Advice
 
+Tap the buttons below 👇`
   const options = {
     reply_markup: {
       inline_keyboard: [
@@ -39,7 +40,7 @@ Tap the buttons below 👇`;
 bot.on('callback_query', (query) => {
   if (query.data === 'joined') {
     bot.sendMessage(query.message.chat.id,
-      "✅ Thank you for joining!\n\nYou will now receive daily market insights and educational trading setups.\n\nStay tuned! 📈"
+     "✅ Thank you for joining!\n\nYou will now receive daily market insights and educational trading setups for learning purposes only.\n\n📚 This is not financial advice. Always do your own research before trading.\n\nStay tuned and keep learning! 📈"
     );
     bot.answerCallbackQuery(query.id);
   }
